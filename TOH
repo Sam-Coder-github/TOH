@@ -2,7 +2,7 @@
 using namespace std;
 
 //tower of HANOI function implementation
-void TOH(int n,char Sour)
+void TOH(int n,char Sour, char Aux,char Des)
 { 
 	if(n==1)
 	{
@@ -11,7 +11,7 @@ void TOH(int n,char Sour)
 	}
 	
 	TOH(n-1,Sour,Des,Aux);
-	cout<<"Move Disk "<<n<<endl;
+	cout<<"Move Disk "<<n<<" from "<<Sour<<" to "<<Des<<endl;
 	TOH(n-1,Aux,Sour,Des);
 }
 
@@ -27,3 +27,4 @@ int main()
 	
 	return 0;
 }
+
